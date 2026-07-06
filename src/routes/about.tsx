@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/section-heading";
+import lisaPhoto from "@/assets/lisa-moore.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -47,23 +49,37 @@ function AboutPage() {
   return (
     <>
       <section className="border-b border-stone bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <SectionHeading
-            as="h1"
-            eyebrow="About Lisa Moore"
-            title="Lisa Moore develops real estate with vision, discipline, and a deep respect for place."
-          />
-          <div className="mt-10 max-w-3xl space-y-6 text-base leading-relaxed text-muted-foreground">
-            <p>
-              Lisa Moore is the Owner, Founder, and CEO of Dasher House Enterprises, a boutique
-              real estate development, hospitality, and property portfolio company focused on
-              creating spaces that generate value, connection, and long-term possibility.
-            </p>
-            <p>
-              Through Dasher House Enterprises, Lisa is building a real estate platform that
-              spans hospitality, event properties, short-stay rentals, multifamily homes, and
-              community-centered development opportunities.
-            </p>
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
+            <div>
+              <SectionHeading
+                as="h1"
+                eyebrow="About Lisa Moore"
+                title="Lisa Moore develops real estate with vision, discipline, and a deep respect for place."
+              />
+              <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground">
+                <p>
+                  Lisa Moore is the Owner, Founder, and CEO of Dasher House Enterprises, a boutique
+                  real estate development, hospitality, and property portfolio company focused on
+                  creating spaces that generate value, connection, and long-term possibility.
+                </p>
+                <p>
+                  Through Dasher House Enterprises, Lisa is building a real estate platform that
+                  spans hospitality, event properties, short-stay rentals, multifamily homes, and
+                  community-centered development opportunities.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute -inset-3 rounded-xl bg-brand-orange/10" aria-hidden="true" />
+              <img
+                src={lisaPhoto.url}
+                alt="Lisa Moore, Owner, Founder, and CEO of Dasher House Enterprises"
+                className="relative rounded-lg border border-stone bg-white object-cover shadow-lg"
+              />
+            </div>
+          </div>
+          <div className="mx-auto mt-16 max-w-3xl space-y-6 text-base leading-relaxed text-muted-foreground lg:mt-20">
             <p>
               Her flagship asset, Dasher House, reflects her wider development philosophy: a
               property should be more than a building. With the right vision, positioning, and
@@ -83,6 +99,7 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
