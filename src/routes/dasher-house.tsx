@@ -161,11 +161,18 @@ function DasherHousePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 pb-24 pt-32 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 pb-24 pt-28 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="mb-6 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-brand-orange">
               <span className="h-px w-10 bg-brand-orange" aria-hidden />
               Flagship Asset
+            </div>
+            <div className="mb-8 inline-block rounded-xl border border-white/20 bg-white p-4 shadow-lg">
+              <img
+                src={dasherHouseLogo.url}
+                alt="The Dasher House logo"
+                className="h-16 w-auto sm:h-20"
+              />
             </div>
             <h1 className="font-display text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
               Dasher House
@@ -179,6 +186,7 @@ function DasherHousePage() {
               intentional use of space.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
+
               <Button asChild size="lg" className="bg-brand-orange text-white hover:bg-brand-orange/90">
                 <a href="#" aria-label="Book on Airbnb">Book on Airbnb</a>
               </Button>
