@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useForm, type FieldValues, type Path, type DefaultValues } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, type FieldValues, type Path, type DefaultValues, type Resolver } from "react-hook-form";
 import { z, type ZodType } from "zod";
 import { toast } from "sonner";
 
@@ -38,8 +37,18 @@ export function InquiryForm<T extends FieldValues>({
   defaultValues,
 }: InquiryFormProps<T>) {
   const [submitted, setSubmitted] = useState(false);
+  const resolver: Resolver<T> = async (values) => {
+    const result = schema.safeParse(values);
+    if (result.success) return { values: result.data, errors: {} };
+    const errors: Record<string, { type: string; message: string }> = {};
+    for (const issue of result.error.issues) {
+      const key = issue.path.join(".") || "root";
+      if (!errors[key]) errors[key] = { type: issue.code, message: issue.message };
+    }
+    return { values: {} as T, errors: errors as never };
+  };
   const form = useForm<T>({
-    resolver: zodResolver(schema),
+    resolver,
     defaultValues,
     mode: "onBlur",
   });
