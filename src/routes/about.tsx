@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/section-heading";
+import lisaPhoto from "@/assets/lisa-moore.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
