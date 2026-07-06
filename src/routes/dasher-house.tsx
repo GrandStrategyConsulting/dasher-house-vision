@@ -10,6 +10,8 @@ import {
   type InquiryField,
 } from "@/components/site/inquiry-form";
 import dasherHouseHero from "@/assets/dasher-house-hero.jpg";
+import dasherHouseLogo from "@/assets/dasher-house-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/dasher-house")({
   head: () => ({
