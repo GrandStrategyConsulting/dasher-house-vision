@@ -41,13 +41,13 @@ export function SiteFooter() {
               and property portfolio company founded by Lisa Moore.
             </p>
             <div className="mt-8">
-              <Link
-                to="/contact"
+              <a
+                href="/contact#send-message"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-brand-orange transition-colors hover:text-white"
               >
                 Start a conversation
                 <span aria-hidden>→</span>
-              </Link>
+              </a>
             </div>
           </div>
           {NAV_COLS.map((col) => (
@@ -58,12 +58,21 @@ export function SiteFooter() {
               <ul className="mt-5 space-y-3">
                 {col.items.map((item) => (
                   <li key={item.label}>
-                    <Link
-                      to={item.to}
-                      className="text-sm text-white/70 transition-colors hover:text-white"
-                    >
-                      {item.label}
-                    </Link>
+                    {item.label === "Start a Conversation" ? (
+                      <a
+                        href="/contact#send-message"
+                        className="text-sm text-white/70 transition-colors hover:text-white"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.to}
+                        className="text-sm text-white/70 transition-colors hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

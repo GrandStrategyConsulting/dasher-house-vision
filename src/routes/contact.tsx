@@ -134,7 +134,10 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
+      <section
+        id="send-message"
+        className="mx-auto max-w-4xl scroll-mt-28 px-4 pb-24 sm:px-6 lg:px-8"
+      >
         <SectionHeading
           eyebrow="General Inquiry"
           title="Send us a message."
