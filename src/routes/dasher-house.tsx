@@ -156,7 +156,7 @@ function DasherHousePage() {
         <div className="absolute inset-0">
           <img
             src={dasherHouseHero}
-            alt="Dasher House interior with long dining table"
+            alt="Front exterior of Dasher House"
             className="h-full w-full object-cover opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />

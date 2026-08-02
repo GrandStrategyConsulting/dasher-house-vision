@@ -163,7 +163,7 @@ function HomePage() {
             <div className="relative overflow-hidden rounded-md">
               <img
                 src={dasherHouseHero}
-                alt="Dasher House interior with a long dining table set for gathering"
+                alt="Front exterior of Dasher House"
                 width={1600}
                 height={1000}
                 loading="lazy"
