@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/section-heading";
 import { cn } from "@/lib/utils";
+import dasherHouseFront from "@/assets/dasher-house-front.png";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -57,8 +58,7 @@ const PROJECTS: Project[] = [
     useCases: "Airbnb, events, retreats, private gatherings",
     description:
       "The flagship asset in the Dasher House Enterprises portfolio. It operates as a hospitality-led property for short-stay guests, private events, retreats, and curated gatherings.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    image: dasherHouseFront,
     categories: ["Hospitality & Short-Stay", "Event Properties"],
     href: "/dasher-house",
   },
