@@ -18,6 +18,7 @@ import { Route as DevelopmentRouteImport } from './routes/development'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as InsightsIndexRouteImport } from './routes/insights.index'
 import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -65,6 +66,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
   path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InsightsIndexRoute = InsightsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => InsightsRoute,
+} as any)
 const InsightsSlugRoute = InsightsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/partnerships': typeof PartnershipsRoute
   '/portfolio': typeof PortfolioRoute
   '/insights/$slug': typeof InsightsSlugRoute
+  '/insights/': typeof InsightsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -90,10 +97,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/dasher-house': typeof DasherHouseRoute
   '/development': typeof DevelopmentRoute
-  '/insights': typeof InsightsRouteWithChildren
   '/partnerships': typeof PartnershipsRoute
   '/portfolio': typeof PortfolioRoute
   '/insights/$slug': typeof InsightsSlugRoute
+  '/insights': typeof InsightsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -107,6 +114,7 @@ export interface FileRoutesById {
   '/partnerships': typeof PartnershipsRoute
   '/portfolio': typeof PortfolioRoute
   '/insights/$slug': typeof InsightsSlugRoute
+  '/insights/': typeof InsightsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +129,7 @@ export interface FileRouteTypes {
     | '/partnerships'
     | '/portfolio'
     | '/insights/$slug'
+    | '/insights/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -129,10 +138,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dasher-house'
     | '/development'
-    | '/insights'
     | '/partnerships'
     | '/portfolio'
     | '/insights/$slug'
+    | '/insights'
   id:
     | '__root__'
     | '/'
@@ -145,6 +154,7 @@ export interface FileRouteTypes {
     | '/partnerships'
     | '/portfolio'
     | '/insights/$slug'
+    | '/insights/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -224,6 +234,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/insights/': {
+      id: '/insights/'
+      path: '/'
+      fullPath: '/insights/'
+      preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof InsightsRoute
+    }
     '/insights/$slug': {
       id: '/insights/$slug'
       path: '/$slug'
@@ -236,10 +253,12 @@ declare module '@tanstack/react-router' {
 
 interface InsightsRouteChildren {
   InsightsSlugRoute: typeof InsightsSlugRoute
+  InsightsIndexRoute: typeof InsightsIndexRoute
 }
 
 const InsightsRouteChildren: InsightsRouteChildren = {
   InsightsSlugRoute: InsightsSlugRoute,
+  InsightsIndexRoute: InsightsIndexRoute,
 }
 
 const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
