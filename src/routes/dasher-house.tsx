@@ -11,7 +11,10 @@ import {
 } from "@/components/site/inquiry-form";
 import dasherHouseHero from "@/assets/dasher-house-hero.jpg";
 import dasherHouseLogo from "@/assets/dasher-house-logo.png";
-
+import dasherHouseGazebo from "@/assets/dasher-house-gazebo.png";
+import dasherHousePondView from "@/assets/dasher-house-pond-view.png";
+import dasherHouseRearLawn from "@/assets/dasher-house-rear-lawn.png";
+import dasherHouseWideLawn from "@/assets/dasher-house-wide-lawn.png";
 
 export const Route = createFileRoute("/dasher-house")({
   head: () => ({
@@ -67,44 +70,24 @@ const FEATURES = [
 
 const GALLERY = [
   {
-    src: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
-    alt: "Exterior of a character-rich home",
-    caption: "Exterior",
+    src: dasherHouseWideLawn,
+    alt: "Wide lawn and exterior view of Dasher House",
+    caption: "The grounds at Dasher House",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-    alt: "Warm interior living space",
-    caption: "Interior",
+    src: dasherHouseRearLawn,
+    alt: "Rear exterior of Dasher House overlooking the lawn",
+    caption: "Dasher House from the rear lawn",
   },
   {
-    src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
-    alt: "Gathering space with sofas",
-    caption: "Gathering Spaces",
+    src: dasherHouseGazebo,
+    alt: "White gazebo beside the pond at Dasher House",
+    caption: "The pond-side gazebo",
   },
   {
-    src: "https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1200&q=80",
-    alt: "Dining and hosting area",
-    caption: "Dining & Hosting",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-    alt: "Bedroom with warm styling",
-    caption: "Bedrooms",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80",
-    alt: "Event setup with candles and dinnerware",
-    caption: "Event Setup",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80",
-    alt: "Neighborhood streetscape",
-    caption: "Neighborhood",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80",
-    alt: "Architectural details",
-    caption: "Details & Textures",
+    src: dasherHousePondView,
+    alt: "Pond and landscaped grounds at Dasher House",
+    caption: "A view across the pond",
   },
 ];
 
@@ -189,7 +172,7 @@ function DasherHousePage() {
 
               <Button asChild size="lg" className="bg-brand-orange text-white hover:bg-brand-orange/90">
                 <a
-                  href="https://www.airbnb.com/rooms/685027557898455005?unique_share_id=68819ffe-6766-4985-824d-be27b77596a2&viralityEntryPoint=1&s=76&source_impression_id=p3_1783371865_P3IQKgbHOtQe5xkc"
+                  href="https://www.airbnb.com/rooms/685027557898455005?guests=1&adults=1&s=67&unique_share_id=92e3a4e8-70d7-4646-a71c-d94394b86792"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Book on Airbnb"
@@ -268,12 +251,12 @@ function DasherHousePage() {
       {/* GALLERY */}
       <section className="border-y border-stone bg-white">
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Gallery" title="Inside Dasher House." />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <SectionHeading eyebrow="Gallery" title="The Dasher House Experience" />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {GALLERY.map((g, i) => (
               <figure
                 key={g.caption + i}
-                className={`overflow-hidden rounded-md border border-stone ${i === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
+                className="aspect-[4/3] overflow-hidden rounded-md border border-stone"
               >
                 <img
                   src={g.src}
@@ -298,7 +281,7 @@ function DasherHousePage() {
           <div className="mt-8">
             <Button asChild size="lg" className="bg-brand-orange text-white hover:bg-brand-orange/90">
               <a
-                href="https://www.airbnb.com/rooms/685027557898455005?unique_share_id=68819ffe-6766-4985-824d-be27b77596a2&viralityEntryPoint=1&s=76&source_impression_id=p3_1783371865_P3IQKgbHOtQe5xkc"
+                href="https://www.airbnb.com/rooms/685027557898455005?guests=1&adults=1&s=67&unique_share_id=92e3a4e8-70d7-4646-a71c-d94394b86792"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Airbnb availability"
