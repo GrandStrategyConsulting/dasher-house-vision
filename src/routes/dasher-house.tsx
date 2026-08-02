@@ -188,7 +188,14 @@ function DasherHousePage() {
             <div className="mt-10 flex flex-wrap gap-3">
 
               <Button asChild size="lg" className="bg-brand-orange text-white hover:bg-brand-orange/90">
-                <a href="#" aria-label="Book on Airbnb">Book on Airbnb</a>
+                <a
+                  href="https://www.airbnb.com/rooms/685027557898455005?unique_share_id=68819ffe-6766-4985-824d-be27b77596a2&viralityEntryPoint=1&s=76&source_impression_id=p3_1783371865_P3IQKgbHOtQe5xkc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book on Airbnb"
+                >
+                  Book on Airbnb
+                </a>
               </Button>
               <Button
                 asChild
@@ -290,7 +297,14 @@ function DasherHousePage() {
           </p>
           <div className="mt-8">
             <Button asChild size="lg" className="bg-brand-orange text-white hover:bg-brand-orange/90">
-              <a href="#" aria-label="View Airbnb availability">View Airbnb Availability</a>
+              <a
+                href="https://www.airbnb.com/rooms/685027557898455005?unique_share_id=68819ffe-6766-4985-824d-be27b77596a2&viralityEntryPoint=1&s=76&source_impression_id=p3_1783371865_P3IQKgbHOtQe5xkc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Airbnb availability"
+              >
+                View Airbnb Availability
+              </a>
             </Button>
           </div>
         </div>
