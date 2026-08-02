@@ -61,7 +61,7 @@ function HomePage() {
         <div className="absolute inset-0">
           <img
             src={homeHero}
-            alt="Character-rich boutique home at golden hour"
+            alt="Front exterior of Dasher House"
             width={1600}
             height={1000}
             className="h-full w-full object-cover"
