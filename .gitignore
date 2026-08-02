@@ -30,3 +30,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# npm lockfile is not the project's canonical lockfile (bun.lock is)
+package-lock.json
