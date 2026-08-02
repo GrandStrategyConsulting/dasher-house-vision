@@ -120,11 +120,12 @@ function HomePage() {
             />
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               Lisa Moore is an Investor, Developer and Property Funding Introduction &amp;
-              Relationship Facilitator. Dasher House Enterprises to bring together her vision for
+              Relationship Facilitator. Dasher House Enterprises brings together her vision for
               real estate, hospitality, community living, and long-term property value creation.
               Her work is rooted in the belief that the right property, in the right place, with
               the right strategy, can become more than an asset. It can become a destination, a
-              gathering place, a home, a catalyst, and a source of opportunity.
+              gathering place, a home, a catalyst, and a source of opportunity for future
+              generations.
             </p>
             <div className="mt-8 flex justify-center">
               <Button
