@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteLayout } from "@/components/site/site-layout";
 import { Toaster } from "@/components/ui/sonner";
-import logoAsset from "@/assets/dasher-logo.png.asset.json";
+import logoAsset from "@/assets/dasher-house-logo.png";
 
 function NotFoundComponent() {
   return (
@@ -102,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: logoAsset.url, type: "image/png" },
+      { rel: "icon", href: logoAsset, type: "image/png" },
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",

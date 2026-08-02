@@ -10,7 +10,7 @@ import {
   type InquiryField,
 } from "@/components/site/inquiry-form";
 import dasherHouseHero from "@/assets/dasher-house-hero.jpg";
-import dasherHouseLogo from "@/assets/dasher-house-logo.png.asset.json";
+import dasherHouseLogo from "@/assets/dasher-house-logo.png";
 
 
 export const Route = createFileRoute("/dasher-house")({
@@ -169,7 +169,7 @@ function DasherHousePage() {
             </div>
             <div className="mb-8 inline-block rounded-xl border border-white/20 bg-white p-4 shadow-lg">
               <img
-                src={dasherHouseLogo.url}
+                src={dasherHouseLogo}
                 alt="The Dasher House logo"
                 className="h-16 w-auto sm:h-20"
               />
