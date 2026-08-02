@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/section-heading";
-import lisaPhoto from "@/assets/lisa-moore.png.asset.json";
+import lisaPhoto from "@/assets/lisa-moore-portrait.png";
 
 
 export const Route = createFileRoute("/about")({
@@ -73,7 +73,7 @@ function AboutPage() {
             <div className="relative">
               <div className="absolute -inset-3 rounded-xl bg-brand-orange/10" aria-hidden="true" />
               <img
-                src={lisaPhoto.url}
+                src={lisaPhoto}
                 alt="Lisa Moore, Owner, Founder, and CEO of Dasher House Enterprises"
                 className="relative rounded-lg border border-stone bg-white object-cover shadow-lg"
               />
