@@ -109,6 +109,36 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ABOUT LISA PREVIEW */}
+      <section className="border-t border-stone bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <SectionHeading
+              align="center"
+              eyebrow="Leadership"
+              title="Lisa Moore, Owner, Founder, and CEO."
+            />
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              Lisa Moore is an Investor, Developer and Property Funding Introduction &amp;
+              Relationship Facilitator. Dasher House Enterprises to bring together her vision for
+              real estate, hospitality, community living, and long-term property value creation.
+              Her work is rooted in the belief that the right property, in the right place, with
+              the right strategy, can become more than an asset. It can become a destination, a
+              gathering place, a home, a catalyst, and a source of opportunity.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button
+                asChild
+                variant="outline"
+                className="border-brand-blue bg-transparent text-brand-blue hover:bg-brand-blue hover:text-white"
+              >
+                <Link to="/about">Meet Lisa Moore</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* POSITIONING */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-20">
@@ -298,36 +328,6 @@ function HomePage() {
                 <Link to="/partnerships">
                   Start a Partnership Conversation <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT LISA PREVIEW */}
-      <section className="border-t border-stone bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <SectionHeading
-              align="center"
-              eyebrow="Leadership"
-              title="Lisa Moore, Owner, Founder, and CEO."
-            />
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Lisa Moore is an Investor, Developer and Property Funding Introduction &amp;
-              Relationship Facilitator. Dasher House Enterprises to bring together her vision for
-              real estate, hospitality, community living, and long-term property value creation.
-              Her work is rooted in the belief that the right property, in the right place, with
-              the right strategy, can become more than an asset. It can become a destination, a
-              gathering place, a home, a catalyst, and a source of opportunity.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <Button
-                asChild
-                variant="outline"
-                className="border-brand-blue bg-transparent text-brand-blue hover:bg-brand-blue hover:text-white"
-              >
-                <Link to="/about">Meet Lisa Moore</Link>
               </Button>
             </div>
           </div>
