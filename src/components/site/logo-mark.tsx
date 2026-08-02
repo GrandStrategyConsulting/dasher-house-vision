@@ -19,8 +19,8 @@ export function LogoMark({ className, inverted = false }: LogoMarkProps) {
       <img
         src={logoAsset}
         alt="Dasher House Enterprises"
-        width={865}
-        height={460}
+        width={523}
+        height={386}
         className="h-9 w-auto object-contain sm:h-10"
       />
     </div>
